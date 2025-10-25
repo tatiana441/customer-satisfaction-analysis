@@ -4,77 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tatiana Muñoz | Data & Business Analyst</title>
-  <meta name="description" content="Hoja de vida en formato portafolio de Tatiana Muñoz – Data & BI Specialist. Experiencia, proyectos, habilidades y contacto." />
+  <meta name="description" content="Portafolio/Hoja de vida de Tatiana Muñoz – Data & BI Specialist. Proyectos, experiencia, habilidades y contacto." />
   <style>
     :root{
-      /* Pasteles suaves */
-      --bg:#eef1f6;          /* azul grisáceo claro (un poco más oscuro) */
-      --card:#ffffff;        /* blanco */
-      --ink:#18212f;         /* gris azulado más oscuro para texto */
-      --muted:#5b6372;       /* gris medio */
-      --brand:#94a3b8;       /* azul pálido */
-      --brand-2:#9ae6d3;     /* verde-menta pastel algo más oscuro */
-      --accent:#f5b7d2;      /* rosa pastel más profundo */
-      --ring: 0 0 0 3px rgba(154, 230, 211, .45);
+      --bg:#eef1f6; --card:#ffffff; --ink:#18212f; --muted:#5b6372;
+      --brand:#94a3b8; --brand-2:#9ae6d3; --accent:#f5b7d2;
+      --ring: 0 0 0 3px rgba(154,230,211,.45);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; background:radial-gradient(1200px 600px at 10% -20%, rgba(245,183,210,.25), transparent), radial-gradient(900px 500px at 110% -10%, rgba(154,230,211,.25), transparent), var(--bg); color:var(--ink); line-height:1.55}
+    *{box-sizing:border-box} html,body{margin:0}
+    body{
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(245,183,210,.25), transparent),
+        radial-gradient(900px 500px at 110% -10%, rgba(154,230,211,.25), transparent),
+        var(--bg);
+      color:var(--ink); line-height:1.55;
+    }
     a{color:inherit; text-decoration:none}
     .container{max-width:1040px; margin:0 auto; padding:20px}
-    .hero{display:grid; grid-template-columns:1fr; gap:18px; padding:22px; background:linear-gradient(180deg, #fff 0%, #f8fafc 100%); border-radius:20px; border:1px solid #e5e7eb}
-    .title{font-size:clamp(28px,4vw,40px); letter-spacing:.2px; font-weight:800}
+    .hero{display:grid; grid-template-columns:1fr; gap:18px; padding:22px;
+      background:linear-gradient(180deg, #fff 0%, #f8fafc 100%); border-radius:20px; border:1px solid #e5e7eb}
+    .title{font-size:clamp(28px,4vw,40px); font-weight:800}
     .subtitle{color:var(--muted); font-size:clamp(14px,2vw,16px)}
     .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
     .chip{background:#f1f5f9; border:1px solid #e2e8f0; color:#475569; padding:6px 10px; border-radius:999px; font-size:12px}
     .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
-    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid #cbd5e1; background:#ffffff; color:#0f172a; font-weight:600}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid #cbd5e1; background:#ffffff; color:#0f172a; font-weight:600; cursor:pointer}
     .btn:hover{transform:translateY(-1px); box-shadow: var(--ring)}
     .btn.brand{background:linear-gradient(90deg, var(--brand-2), var(--accent)); border:1px solid #dbeafe}
     .grid{display:grid; gap:16px}
-    @media(min-width:900px){
-      .hero{grid-template-columns: 1.2fr .8fr}
-      .grid{grid-template-columns: repeat(12,1fr)}
-    }
     .card{background:var(--card); border:1px solid #e5e7eb; border-radius:16px; padding:16px}
     .card h3{margin:0 0 8px 0}
-    .kpis{grid-column: span 12}
-    .kpi-row{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
-    .kpi{background:#fcfcff; border:1px solid #e9eaf6; border-radius:14px; padding:14px}
-    .kpi .n{font-size:22px; font-weight:800}
     .muted{color:var(--muted)}
-    .projects{grid-column: span 12}
     .cards{display:grid; grid-template-columns:1fr; gap:14px}
-    @media(min-width:720px){.cards{grid-template-columns: repeat(2,1fr)}}
-    .tag{display:inline-block; background:#f1f5f9; border:1px solid #e2e8f0; padding:4px 8px; border-radius:999px; font-size:12px; color:#334155}
+    .project-card{position:relative; border:1px dashed #e5e7eb; border-radius:12px; padding:12px; background:#fff}
     .row{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-    .project-card{position:relative}
+    .tag{display:inline-block; background:#f1f5f9; border:1px solid #e2e8f0; padding:4px 8px; border-radius:999px; font-size:12px; color:#334155}
     .project-actions{display:flex; gap:8px; margin-top:10px}
     .link{padding:8px 12px; border-radius:10px; border:1px solid #cbd5e1; background:#fff; font-weight:600}
-    .timeline{grid-column: span 7}
-    .skillbox{grid-column: span 5}
+    .timeline{grid-column: span 7} .skillbox{grid-column: span 5}
+    @media(min-width:900px){ .grid{grid-template-columns: repeat(12,1fr)} .hero{grid-template-columns:1.2fr .8fr} }
     .timeline ul{list-style:none; margin:0; padding:0}
     .timeline li{padding:12px 0; border-left:2px solid #e5e7eb; padding-left:14px; position:relative}
     .timeline li::before{content:""; width:10px; height:10px; border-radius:50%; background:var(--brand-2); position:absolute; left:-6px; top:18px}
     .skills{display:flex; flex-wrap:wrap; gap:8px}
     .skill{background:#f0f9ff; border:1px solid #dbeafe; padding:8px 10px; border-radius:10px; font-size:13px}
     .footer{opacity:.8; font-size:12px; margin-top:24px; text-align:center}
-    .filters{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0}
-    .filter{cursor:pointer}
-    .filter.active{background:#ecfeff; border-color:#bae6fd}
-    .hidden{display:none}
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- HERO -->
     <header class="hero">
       <div>
-        <div class="row" style="justify-content:space-between;align-items:center">
-          <div>
-            <h1 class="title">Tatiana Muñoz</h1>
-            <p class="subtitle">Data & Business Intelligence Analyst · Bogotá, Colombia</p>
-          </div>
-        </div>
+        <h1 class="title">Tatiana Muñoz</h1>
+        <p class="subtitle">Data & Business Intelligence Analyst · Bogotá, Colombia</p>
         <div class="chips">
           <span class="chip">EDA accionable</span>
           <span class="chip">SQL + Python</span>
@@ -85,7 +69,15 @@
         <div class="cta">
           <a class="btn brand" href="https://tatiana441.github.io/customer-satisfaction-analysis/" target="_blank" rel="noopener">Proyecto CSAT (HTML)</a>
           <a class="btn" href="https://github.com/tatiana441/customer-satisfaction-analysis" target="_blank" rel="noopener">Repositorio</a>
-          <a class="btn" href="https://colab.research.google.com/github/tatiana441/customer-satisfaction-analysis/blob/main/analisis_eda_crudo_Keimi.ipynb) y entregables ejecutivos claros.</p>
+          <a class="btn" href="https://colab.research.google.com/github/tatiana441/customer-satisfaction-analysis/blob/main/analisis_eda_crudo_Keimi.ipynb" target="_blank" rel="noopener">Abrir en Colab</a>
+          <a class="btn" id="emailBtn" href="mailto:tatiana441@gmail.com?subject=Contacto%20portafolio%20Tatiana%20Mu%C3%B1oz">Contactar</a>
+          <a class="btn" href="CV_Tatiana_Munoz.pdf" target="_blank" rel="noopener">Descargar CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/tmarias/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Sobre mí</h3>
+        <p class="muted">Business Intelligence Analyst con formación en ingeniería y analítica de datos, +4 años de experiencia en BPO y Oil & Gas. Traduzco datos en decisiones con SQL, Power BI y Python. Liderazgo de equipos (hasta 7) y foco en mejora continua.</p>
         <ul class="muted" style="padding-left:16px;">
           <li>Stack: Python (pandas, numpy, seaborn, matplotlib), SQL, Power BI</li>
           <li>Entornos: Operaciones, Backoffice, QA, WFM, BI</li>
@@ -94,26 +86,20 @@
       </div>
     </header>
 
+    <!-- PROYECTO -->
     <main class="grid" style="margin-top:18px;">
-      <section class="projects card" style="grid-column:span 12">
-        <div class="row" style="justify-content:space-between; align-items:center;">
-          <h3 style="margin:0">Proyecto destacado</h3>
-          <div class="filters">
-            <button class="tag filter active" data-tag="all">Todos</button>
-            <button class="tag filter" data-tag="bpo">BPO</button>
-            <button class="tag filter" data-tag="oilgas">Oil & Gas</button>
-            <button class="tag filter" data-tag="marketing">Marketing</button>
-          </div>
-        </div>
-        <div id="cards" class="cards">
-          <!-- CSAT Project (BPO) -->
-          <article class="project-card" data-tags="bpo">
-            <h4 style="margin:0 0 6px 0">CSAT & DSAT Drivers – EDA accionable</h4>
-            <p class="muted" style="margin:0 0 10px 0">Identificación de motivos de insatisfacción, brechas por segmento y palancas de mejora operativa. Datos sintéticos sin PII.</p>
-            <div class="row" style="gap:6px; margin-bottom:6px;">
-              <span class="tag">BPO</span>
-              <span class="tag">EDA</span>
-              <span class="tag">Python/Power BI</span>
+      <section class="card" style="grid-column:span 12">
+        <h3>Proyecto destacado</h3>
+        <div class="cards">
+          <article class="project-card">
+            <div class="row" style="justify-content:space-between">
+              <div>
+                <h4 style="margin:0 0 6px 0">CSAT & DSAT Drivers – EDA accionable</h4>
+                <p class="muted" style="margin:0 0 10px 0">Identificación de motivos de insatisfacción, brechas por segmento y palancas de mejora operativa. Datos sintéticos sin PII.</p>
+                <div class="row" style="gap:6px; margin-bottom:6px;">
+                  <span class="tag">BPO</span><span class="tag">EDA</span><span class="tag">Python/Power BI</span>
+                </div>
+              </div>
             </div>
             <div class="project-actions">
               <a class="link" href="https://tatiana441.github.io/customer-satisfaction-analysis/" target="_blank" rel="noopener">Ver HTML</a>
@@ -124,29 +110,16 @@
         </div>
       </section>
 
-      <!-- Sección interactiva: visual de "pasión por los datos" -->
-      <section class="card" style="grid-column:span 12">
-        <h3>Mi lenguaje: datos en movimiento</h3>
-        <p class="muted" style="margin-top:4px">Mini visual interactiva en vivo. Pasa el cursor para ver valores; cada pocos segundos se regenera como si fueran nuevas mediciones.</p>
-        <div style="display:grid; gap:14px; grid-template-columns:1fr;">
-          <svg id="viz-bars" viewBox="0 0 680 220" style="width:100%; height:auto; background:#f7f8fc; border:1px solid #e5e7eb; border-radius:12px"></svg>
-        </div>
-      </section>
-
+      <!-- Experiencia -->
       <section class="timeline card">
         <h3>Experiencia</h3>
         <ul>
-          <li>
-            <strong>Business Intelligence Analyst II / Reporting Analyst (bilingüe)</strong> · Teleperformance · Mar 2021 – Presente<br>
-            <span class="muted">SQL avanzado, calidad de datos, dashboards interactivos en Power BI, reportes ejecutivos y monitoreo de KPIs para mercado panamericano. Soporte a decisiones con insights accionables.</span>
-          </li>
-          <li>
-            <strong>Geomechanical Analyst Technician</strong> · SGS (contrato OPS, remoto) · Dic 2022 – Mar 2025<br>
-            <span class="muted">Monitoreo y análisis geomecánico con EcoAGE; integración de datos operacionales y parámetros de perforación en tiempo real. Reportes diarios, correlaciones y recomendaciones para reducir NPT.</span>
-          </li>
+          <li><strong>Business Intelligence Analyst II / Reporting Analyst (bilingüe)</strong> · Teleperformance · Mar 2021 – Presente<br><span class="muted">SQL, calidad de datos, Power BI, reportes ejecutivos y seguimiento de KPIs.</span></li>
+          <li><strong>Geomechanical Analyst Technician</strong> · SGS (OPS, remoto) · Dic 2022 – Mar 2025<br><span class="muted">Análisis geomecánico con EcoAGE; correlaciones y recomendaciones para reducir NPT.</span></li>
         </ul>
       </section>
 
+      <!-- Skills -->
       <section class="skillbox card">
         <h3>Habilidades</h3>
         <div class="skills">
@@ -169,16 +142,6 @@
           <li><strong>Petroleum Engineering</strong> – UIS · Dic 2019</li>
         </ul>
       </section>
-
-      <section class="card" style="grid-column:span 12">
-        <h3>Reconocimientos y Certificados</h3>
-        <ul class="muted" style="padding-left:16px;">
-          <li><strong>Winner Innovate Ecopetrol Team Award</strong> – ECOPETROL–UNIRED · Dic 2018</li>
-          <li><strong>IBA 2022 – Region Winners (1st Place)</strong> – AAPG LACR · May 2022</li>
-          <li><strong>IELTS B2</strong> · Certificación</li>
-          <li><strong>Data Science for All</strong> · Correlation One (training)</li>
-        </ul>
-      </section>
     </main>
 
     <footer class="footer">
@@ -186,7 +149,7 @@
     </footer>
   </div>
 
-  <!-- Modal CSAT -->
+  <!-- Modal -->
   <dialog id="csat-modal" style="border:none; border-radius:16px; padding:0; max-width:720px; width:96%; background:#ffffff; color:var(--ink); border:1px solid #e5e7eb">
     <div style="padding:18px 18px 10px; border-bottom:1px solid #e5e7eb; display:flex; justify-content:space-between; align-items:center">
       <strong>Resumen del proyecto: CSAT & DSAT Drivers</strong>
@@ -194,11 +157,10 @@
     </div>
     <div style="padding:18px">
       <ul>
-        <li><strong>Objetivo:</strong> detectar drivers principales de DSAT, brechas por segmento y palancas de mejora.</li>
-        <li><strong>Datos:</strong> sintéticos, sin PII. Cargados vía <code>raw.githubusercontent</code>.</li>
+        <li><strong>Objetivo:</strong> detectar drivers de DSAT, brechas por segmento y palancas de mejora.</li>
+        <li><strong>Datos:</strong> sintéticos, sin PII (cargados vía <code>raw.githubusercontent</code>).</li>
         <li><strong>Método:</strong> perfilamiento, EDA visual, cortes por drivers y correlaciones.</li>
         <li><strong>Hallazgos (rellenar):</strong> añade 3–5 bullets con cifras e impacto esperado.</li>
-        <li><strong>Entrega:</strong> HTML, Notebook Colab y README con plan de acción.</li>
       </ul>
       <div class="project-actions">
         <a class="link" href="https://tatiana441.github.io/customer-satisfaction-analysis/" target="_blank">Ver HTML</a>
@@ -206,24 +168,10 @@
       </div>
     </div>
   </dialog>
+
   <script>
     // Año
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Filtros
-    const filters = document.querySelectorAll('.filter');
-    const cards = document.querySelectorAll('.project-card');
-    filters.forEach(f=>{
-      f.addEventListener('click',()=>{
-        filters.forEach(x=>x.classList.remove('active'));
-        f.classList.add('active');
-        const tag = f.dataset.tag;
-        cards.forEach(c=>{
-          const ok = tag==='all' || (c.dataset.tags||'').includes(tag);
-          c.classList.toggle('hidden', !ok);
-        })
-      })
-    })
 
     // Modal
     const openBtns = document.querySelectorAll('[data-open]');
@@ -236,65 +184,14 @@
       const dlg=b.closest('dialog'); dlg && dlg.close();
     }));
 
-    // Visual interactiva: barras animadas con tooltip
-    const svg = document.getElementById('viz-bars');
-    const W = 680, H = 220, P = 24; // width, height, padding
-    const N = 16; // barras
-    const maxVal = 100;
-
-    function renderBars() {
-      const data = Array.from({length:N}, ()=> Math.floor(Math.random()*maxVal));
-      const bw = (W - 2*P) / N - 6; // ancho barra
-      svg.innerHTML = '';
-
-      // Ejes simples
-      const axis = document.createElementNS('http://www.w3.org/2000/svg','line');
-      axis.setAttribute('x1', P);
-      axis.setAttribute('y1', H-P);
-      axis.setAttribute('x2', W-P);
-      axis.setAttribute('y2', H-P);
-      axis.setAttribute('stroke', '#cfd6e3');
-      svg.appendChild(axis);
-
-      data.forEach((v,i)=>{
-        const x = P + i*(bw+6);
-        const h = (v/maxVal)*(H-2*P);
-        const y = (H-P) - h;
-        const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
-        rect.setAttribute('x', x);
-        rect.setAttribute('y', H-P);
-        rect.setAttribute('width', bw);
-        rect.setAttribute('height', 0);
-        rect.setAttribute('rx', 4);
-        rect.setAttribute('fill', i%2? '#b9e8de' : '#f7c6de');
-        rect.style.cursor = 'pointer';
-        rect.addEventListener('mousemove', (e)=> showTip(e, `v=${v}`));
-        rect.addEventListener('mouseleave', hideTip);
-        svg.appendChild(rect);
-        // animación de subida
-        rect.animate([{y: H-P, height: 0}, {y: y, height: h}], {duration:700, fill:'forwards', easing:'cubic-bezier(.2,.8,.2,1)'});
-      });
-    }
-
-    // Tooltip flotante
-    let tip;
-    function showTip(evt, text){
-      if(!tip){ tip = document.createElement('div'); tip.style.position='fixed'; tip.style.pointerEvents='none'; tip.style.padding='6px 8px'; tip.style.background='#111827cc'; tip.style.color='#fff'; tip.style.borderRadius='8px'; tip.style.fontSize='12px'; document.body.appendChild(tip); }
-      tip.textContent = text; tip.style.display='block'; tip.style.left = (evt.clientX+12)+'px'; tip.style.top = (evt.clientY+12)+'px';
-    }
-    function hideTip(){ if(tip) tip.style.display='none'; }
-
-    renderBars();
-    setInterval(renderBars, 4500);
-
-    // Botón alterno: copiar correo al portapapeles si el cliente de email no abre
-    const emailBtn = Array.from(document.querySelectorAll('a')).find(a=> a.href && a.href.startsWith('mailto:'));
+    // Copia de email si mailto no abre
+    const emailBtn = document.getElementById('emailBtn');
     if(emailBtn){
-      emailBtn.addEventListener('contextmenu', (e)=>{
+      emailBtn.addEventListener('contextmenu',(e)=>{
         e.preventDefault();
         navigator.clipboard.writeText('tatiana441@gmail.com');
         emailBtn.textContent = 'Correo copiado ✔';
-        setTimeout(()=> emailBtn.textContent = 'Contactar', 1200);
+        setTimeout(()=> emailBtn.textContent='Contactar', 1200);
       });
     }
   </script>
