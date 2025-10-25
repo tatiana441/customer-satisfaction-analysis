@@ -58,17 +58,6 @@ README.md
     - 💡 Insights Clave
     - 🔍 Conclusiones del Análisis Completo
 
-## Cómo ejecutar
-```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-jupyter lab
-```
-
-## Ver sin instalar
-- Exporta el notebook a HTML (File → Download as → HTML) y súbelo a `reports/`.
 
 ## Aviso de datos
 Datos sintéticos para fines demostrativos. Cualquier parecido con datos reales es intencionalmente controlado.
