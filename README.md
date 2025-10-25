@@ -5,6 +5,7 @@
 **TL;DR:** EDA reproducible con datos sintéticos inspirado en un caso real de negocio. Incluye limpieza, exploración visual y hallazgos accionables.
 
 📄 **Reporte HTML (web):** https://tatiana441.github.io/customer-satisfaction-analysis/
+**CSV:** [Customer_Satisfaction_Sample_Data.csv](Customer_Satisfaction_Sample_Data.csv)
 
 ## Objetivo
 Explorar y diagnosticar el dataset para identificar patrones, calidad de datos y oportunidades de mejora de KPIs.
